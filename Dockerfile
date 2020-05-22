@@ -1,7 +1,7 @@
 FROM golang:1
 
 # Install must have
-RUN apt-get update && apt-get install -y build-essential git curl python3-pip
+RUN apt-get update && apt-get install -y build-essential gcc make git curl python3-pip unzip libxml2-dev libc-dev
 RUN go get github.com/golang-migrate/migrate
 RUN go get github.com/fullstorydev/grpcurl
 RUN go install github.com/fullstorydev/grpcurl/cmd/grpcurl
